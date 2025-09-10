@@ -21,6 +21,12 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
+        /* Garantir que a imagem não ultrapassa a largura do container */
+        .responsive-logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-8">
@@ -30,12 +36,13 @@
             <div class="text-center mb-8">
                 <img src="logo.gif" 
                      alt="Logo 50 Anos CUMN" 
-                     class="mx-auto mb-4 max-w-md h-auto rounded-lg shadow-md"
+                     class="mx-auto mb-4 responsive-logo rounded-lg shadow-md"
+                     style="max-width: 320px; width: 100%; height: auto;"
                      onerror="this.style.display='none';">
             <br>
         
                 <h1 class="text-3xl font-bold text-gray-900 mb-2">CUMN: Paredes com História!</h1>
-                <p class="text-gray-600">O CUMN vai festejar 50 anos... e 15 desses são já no <strong>"CUMN novo"</strong>: é já muito tempo de História e histórias, vividas na Rua Almeida Garrett! <br><br>
+                <p class="text-gray-600">O CUMN vai festejar 50 anos... e 15 desses são já no <strong>"CUMN novo"</strong>: é já muito tempo de História e histórias, vividas na Rua Almeida Garrett!<br><br>
                     Tens uma <strong>memória bonita</strong> que trazes contigo, do CUMN ao pé do Jardim da Sereia? <br>
                     Ou uma <strong>foto/vídeo memorável</strong>, que ainda te deixa um sorriso nos lábios, do CUMN bem perto da Praça da República? <br>
                     <strong>Partilha isso connosco</strong> - para que chegue a muitos outros, principalmente aos que ainda não conhecem o <strong>"CUMN novo"</strong>! :)</p>
