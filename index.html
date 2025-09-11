@@ -103,7 +103,7 @@
                 <div>
                 </div>
                 <div class="text-center">
-                    <label for="mensagem" class="block text-sm text-gray-600"><strong>...e conta-nos tudo:</strong> "Um certo dia, lá no <strong>\"CUMN novo\"</strong>..."</label>
+                    <label for="mensagem" class="block text-sm text-gray-600"><strong>...e conta-nos tudo:</strong> "Um certo dia, lá no <strong>CUMN novo</strong>..."</label>
                     <br>
                     <textarea id="mensagem" name="mensagem" rows="7" 
                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
@@ -126,10 +126,10 @@
                             </svg>
                             <p class="text-lg font-medium text-gray-900 mb-2">Arraste o ficheiro aqui</p>
                             <p class="text-sm text-gray-500 mb-4">ou clique para seleccionar</p>
-                            <p class="text-xs text-gray-400">PDF, JPG, PNG, GIF, MP4, MOV, ZIP, RAR (máx. 50MB)</p>
+                            <p class="text-xs text-gray-400">PDF, JPG, PNG, GIF, MP4, MOV, ZIP (máx. 50MB)</p>
                         </div>
                         <input type="file" id="fileInput" name="ficheiro" class="hidden" 
-                               accept=".pdf,.jpg,.jpeg,.png,.gif,.mp4,.mov,.zip,.rar" />
+                               accept=".pdf,.jpg,.jpeg,.png,.gif,.mp4,.mov,.zip" />
                     </div>
                     
                     <!-- File Preview -->
@@ -260,14 +260,13 @@
                 'video/quicktime',
                 'application/zip',
                 'application/x-zip-compressed',
-                'application/x-rar-compressed',
-                'application/vnd.rar'
+                
             ];
-            const allowedExtensions = ['.pdf', '.jpg', '.jpeg', '.png', '.gif', '.mp4', '.mov', '.zip', '.rar'];
+            const allowedExtensions = ['.pdf', '.jpg', '.jpeg', '.png', '.gif', '.mp4', '.mov', '.zip'];
             const fileTypeAllowed = allowedTypes.includes(file.type);
             const fileExtensionAllowed = allowedExtensions.some(ext => file.name.toLowerCase().endsWith(ext));
             if (!fileTypeAllowed && !fileExtensionAllowed) {
-                alert('Tipo de ficheiro não suportado. Use: PDF, JPG, PNG, MP4, MOV, ZIP, RAR');
+                alert('Tipo de ficheiro não suportado. Use: PDF, JPG, PNG, MP4, MOV, ZIP');
                 return;
             }
             fileName.textContent = file.name;
